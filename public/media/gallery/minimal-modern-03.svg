@@ -1,0 +1,29 @@
+<!-- Minimal Modern plate 03 — typographic specimen (original placeholder artwork). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Placeholder artwork: typographic specimen study">
+  <rect width="800" height="600" fill="#ffffff"/>
+
+  <!-- Specimen guides: cap height, x-height, baseline, descender -->
+  <g stroke="#101014" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="7 9">
+    <line x1="50" y1="240" x2="750" y2="240"/>
+    <line x1="50" y1="330" x2="750" y2="330"/>
+    <line x1="50" y1="440" x2="750" y2="440"/>
+    <line x1="50" y1="500" x2="750" y2="500"/>
+  </g>
+
+  <!-- Header rule -->
+  <line x1="50" y1="90" x2="750" y2="90" stroke="#101014" stroke-opacity="0.35" stroke-width="1.5"/>
+
+  <!-- Round glyph: O -->
+  <circle cx="160" cy="340" r="100" fill="none" stroke="#101014" stroke-width="14"/>
+
+  <!-- Arch glyph: n -->
+  <path d="M 310 440 V 330 A 90 90 0 0 1 490 330 V 440" fill="none" stroke="#101014" stroke-width="14"/>
+
+  <!-- Pointed glyph: A, set in the accent -->
+  <path d="M 540 440 L 640 240 L 740 440" fill="none" stroke="#b4472f" stroke-width="12"/>
+  <path d="M 575 372 H 705" fill="none" stroke="#b4472f" stroke-width="10"/>
+
+  <!-- Baseline weight marks -->
+  <rect x="60" y="540" width="120" height="8" fill="#101014"/>
+  <rect x="200" y="540" width="40" height="8" fill="#101014" fill-opacity="0.4"/>
+</svg>

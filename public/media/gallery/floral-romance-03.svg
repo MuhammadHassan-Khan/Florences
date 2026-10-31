@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Sample artwork — a soft cluster of rose blossoms">
+  <defs>
+    <linearGradient id="fr3-bg" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#fdf8f5"/>
+      <stop offset="0.5" stop-color="#faeeeb"/>
+      <stop offset="1" stop-color="#f4f1e6"/>
+    </linearGradient>
+    <radialGradient id="fr3-wash" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f0c7cf" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#f0c7cf" stop-opacity="0"/>
+    </radialGradient>
+    <g id="fr3-bloom">
+      <g fill="#d98ea0">
+        <ellipse cx="0" cy="-26" rx="15" ry="27"/>
+        <ellipse cx="0" cy="-26" rx="15" ry="27" transform="rotate(72)"/>
+        <ellipse cx="0" cy="-26" rx="15" ry="27" transform="rotate(144)"/>
+        <ellipse cx="0" cy="-26" rx="15" ry="27" transform="rotate(216)"/>
+        <ellipse cx="0" cy="-26" rx="15" ry="27" transform="rotate(288)"/>
+      </g>
+      <g fill="#f2cfd5" opacity="0.55">
+        <ellipse cx="0" cy="-16" rx="9" ry="17" transform="rotate(36)"/>
+        <ellipse cx="0" cy="-16" rx="9" ry="17" transform="rotate(108)"/>
+        <ellipse cx="0" cy="-16" rx="9" ry="17" transform="rotate(180)"/>
+        <ellipse cx="0" cy="-16" rx="9" ry="17" transform="rotate(252)"/>
+        <ellipse cx="0" cy="-16" rx="9" ry="17" transform="rotate(324)"/>
+      </g>
+      <circle cx="0" cy="0" r="8" fill="#e6c173"/>
+    </g>
+    <g id="fr3-bloom-pale">
+      <g fill="#e8b3bf">
+        <ellipse cx="0" cy="-24" rx="14" ry="25"/>
+        <ellipse cx="0" cy="-24" rx="14" ry="25" transform="rotate(72)"/>
+        <ellipse cx="0" cy="-24" rx="14" ry="25" transform="rotate(144)"/>
+        <ellipse cx="0" cy="-24" rx="14" ry="25" transform="rotate(216)"/>
+        <ellipse cx="0" cy="-24" rx="14" ry="25" transform="rotate(288)"/>
+      </g>
+      <circle cx="0" cy="0" r="7" fill="#f6e2c5"/>
+    </g>
+    <g id="fr3-leaf">
+      <path d="M0 0 C -16 -14, -12 -40, 8 -52 C 24 -30, 18 -10, 0 0 Z" fill="#7d8c77"/>
+      <path d="M0 0 C -2 -18, 1 -36, 8 -52" fill="none" stroke="#fdf8f5" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#fr3-bg)"/>
+  <ellipse cx="380" cy="270" rx="330" ry="250" fill="url(#fr3-wash)"/>
+  <ellipse cx="690" cy="520" rx="200" ry="150" fill="url(#fr3-wash)" opacity="0.5"/>
+
+  <!-- stems fanning out from the base -->
+  <g fill="none" stroke="#7d8c77" stroke-linecap="round">
+    <path d="M400 600 C 372 500, 328 420, 268 340" stroke-width="5"/>
+    <path d="M400 600 C 412 486, 452 404, 520 300" stroke-width="5"/>
+    <path d="M400 600 C 404 520, 424 460, 470 400" stroke-width="3.5"/>
+    <path d="M400 600 C 380 520, 340 470, 300 430" stroke-width="3.5"/>
+    <path d="M520 300 C 574 300, 618 326, 650 366" stroke-width="3"/>
+    <path d="M268 340 C 226 356, 196 386, 178 424" stroke-width="3"/>
+  </g>
+
+  <!-- leaves tucked between the blossoms -->
+  <g>
+    <use href="#fr3-leaf" transform="translate(348 466) rotate(-40) scale(1.1)" opacity="0.9"/>
+    <use href="#fr3-leaf" transform="translate(438 470) rotate(130) scale(1.05)" opacity="0.9"/>
+    <use href="#fr3-leaf" transform="translate(314 404) rotate(-128) scale(0.95)" opacity="0.85"/>
+    <use href="#fr3-leaf" transform="translate(474 396) rotate(44) scale(0.95)" opacity="0.85"/>
+    <use href="#fr3-leaf" transform="translate(593 318) rotate(-30) scale(1)" opacity="0.88"/>
+    <use href="#fr3-leaf" transform="translate(230 372) rotate(-150) scale(0.9)" opacity="0.85"/>
+    <use href="#fr3-leaf" transform="translate(608 344) rotate(120) scale(0.85)" opacity="0.82"/>
+    <use href="#fr3-leaf" transform="translate(197 392) rotate(-120) scale(0.8)" opacity="0.8"/>
+  </g>
+
+  <!-- blossom cluster -->
+  <g>
+    <use href="#fr3-bloom" transform="translate(268 340) scale(1.5)"/>
+    <use href="#fr3-bloom-pale" transform="translate(520 300) scale(1.25)"/>
+    <use href="#fr3-bloom" transform="translate(470 400) scale(1.1)"/>
+    <use href="#fr3-bloom-pale" transform="translate(178 424) scale(0.95)"/>
+    <use href="#fr3-bloom" transform="translate(650 366) scale(1.05)"/>
+    <use href="#fr3-bloom-pale" transform="translate(372 526) scale(0.8)"/>
+  </g>
+
+  <!-- closed buds -->
+  <g>
+    <circle cx="300" cy="430" r="13" fill="#d98ea0" opacity="0.9"/>
+    <circle cx="300" cy="430" r="5" fill="#e6c173" opacity="0.85"/>
+    <circle cx="413" cy="512" r="10" fill="#e8b3bf" opacity="0.9"/>
+    <circle cx="566" cy="307" r="11" fill="#d98ea0" opacity="0.8"/>
+  </g>
+
+  <!-- drifting petals -->
+  <g fill="#d98ea0" opacity="0.4">
+    <ellipse cx="132" cy="176" rx="17" ry="9" transform="rotate(-28 132 176)"/>
+    <ellipse cx="676" cy="150" rx="14" ry="8" transform="rotate(34 676 150)"/>
+    <ellipse cx="722" cy="470" rx="16" ry="9" transform="rotate(-14 722 470)"/>
+    <ellipse cx="98" cy="330" rx="12" ry="7" transform="rotate(52 98 330)"/>
+  </g>
+
+  <rect x="22" y="22" width="756" height="556" rx="12" fill="none" stroke="#d98ea0" stroke-opacity="0.5" stroke-width="2"/>
+</svg>

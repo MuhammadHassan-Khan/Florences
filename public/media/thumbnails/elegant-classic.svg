@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Elegant Classic preview artwork">
+  <defs>
+    <linearGradient id="ec-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#faf6ec"/>
+      <stop offset="1" stop-color="#f0e7d4"/>
+    </linearGradient>
+    <g id="ec-corner" fill="none" stroke="#b9975b" stroke-width="2">
+      <path d="M0 34 C 0 14, 14 0, 34 0"/>
+      <path d="M8 30 C 8 18, 18 8, 30 8" stroke-opacity="0.6"/>
+      <path d="M34 0 l 10 10 l -10 10" stroke-opacity="0.45"/>
+    </g>
+  </defs>
+
+  <rect width="640" height="400" fill="url(#ec-bg)"/>
+
+  <!-- double frame -->
+  <rect x="16" y="16" width="608" height="368" fill="none" stroke="#b9975b" stroke-width="1.8"/>
+  <rect x="27" y="27" width="586" height="346" fill="none" stroke="#b9975b" stroke-width="0.9" stroke-opacity="0.55"/>
+
+  <!-- corner ornaments -->
+  <use href="#ec-corner" transform="translate(34 34)"/>
+  <use href="#ec-corner" transform="translate(606 34) scale(-1 1)"/>
+  <use href="#ec-corner" transform="translate(34 366) scale(1 -1)"/>
+  <use href="#ec-corner" transform="translate(606 366) scale(-1 -1)"/>
+
+  <!-- central calligraphic divider -->
+  <g fill="none" stroke="#8a6d3b" stroke-width="2.2" stroke-linecap="round">
+    <path d="M190 200 C 240 162, 280 232, 320 200"/>
+    <path d="M450 200 C 400 162, 360 232, 320 200"/>
+    <path d="M190 200 c -14 -6, -24 -16, -26 -30" stroke-width="1.6" stroke-opacity="0.7"/>
+    <path d="M450 200 c 14 -6, 24 -16, 26 -30" stroke-width="1.6" stroke-opacity="0.7"/>
+  </g>
+  <g fill="#b9975b">
+    <rect x="312" y="192" width="16" height="16" transform="rotate(45 320 200)"/>
+    <circle cx="160" cy="176" r="3.5"/>
+    <circle cx="480" cy="176" r="3.5"/>
+  </g>
+
+  <!-- quiet type-marks -->
+  <g fill="#8a6d3b" opacity="0.5">
+    <rect x="264" y="266" width="112" height="3"/>
+    <rect x="292" y="280" width="56" height="3"/>
+  </g>
+</svg>

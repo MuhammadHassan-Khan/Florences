@@ -1,0 +1,447 @@
+/*
+ * Elegant Classic — ivory & champagne-gold engraved stationery identity.
+ *
+ * Template-scoped: local palette tokens are declared on the root, which
+ * also themes the shared components through --heading-accent / --cta-*
+ * without touching their CSS. Every animation and transition is gated
+ * behind (prefers-reduced-motion: no-preference); with motion disabled
+ * all content is fully visible and nothing is hidden.
+ */
+
+.template {
+  /* Local palette — champagne gold kept deep enough for AA text on ivory. */
+  --elegant-ground: var(--color-ivory);
+  --elegant-ground-deep: var(--color-ivory-deep);
+  --elegant-paper: var(--color-paper);
+  --elegant-gold: #8a6a2b;
+  --elegant-gold-line: #b8934f;
+  --elegant-rule: rgba(184, 147, 79, 0.55);
+  --elegant-rule-strong: rgba(138, 106, 43, 0.7);
+  --elegant-ink: #2f2a22;
+  --elegant-muted: #6b6154;
+
+  /* Identity theming consumed by shared SectionHeading / EnquiryCta. */
+  --heading-accent: var(--elegant-gold);
+  --cta-bg: var(--elegant-gold);
+  --cta-fg: var(--color-paper);
+  --cta-bg-hover: #6f5320;
+  --cta-fg-hover: var(--color-ivory);
+
+  background: var(--elegant-ground);
+  color: var(--elegant-ink);
+  font-family: var(--font-display);
+}
+
+/* --- Hero: the engraved plate ------------------------------------------ */
+
+.hero {
+  display: grid;
+  place-items: center;
+  padding: clamp(var(--space-7), 7vw, var(--space-9)) var(--space-4);
+}
+
+/* Double-rule frame: outer hairline on the plate, inner one on the
+   content well, separated by a narrow gutter — classic engraving. */
+.plate {
+  width: min(100%, 46rem);
+  padding: var(--space-2);
+  border: 1px solid var(--elegant-rule);
+  background: linear-gradient(180deg, var(--elegant-paper), var(--elegant-ground-deep));
+  box-shadow: var(--shadow-sm);
+}
+
+.plateInner {
+  display: grid;
+  gap: var(--space-4);
+  justify-items: center;
+  text-align: center;
+  padding: clamp(var(--space-6), 6vw, var(--space-8))
+    clamp(var(--space-4), 5vw, var(--space-7));
+  border: 1px solid var(--elegant-rule);
+}
+
+.demoBadge {
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--elegant-rule-strong);
+  border-radius: var(--radius-full);
+  background: var(--elegant-ground);
+  color: var(--elegant-gold);
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.heroEyebrow {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--elegant-muted);
+}
+
+.monogram {
+  display: block;
+  color: var(--elegant-gold);
+}
+
+.monogram svg {
+  display: block;
+  width: clamp(5.5rem, 20vw, 7.5rem);
+  height: auto;
+}
+
+.heroNames {
+  display: grid;
+  gap: 0.06em;
+  margin: 0;
+  font-size: var(--text-hero);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+}
+
+.heroNames span {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.heroAmp {
+  color: var(--elegant-gold);
+  font-size: 0.38em;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.heroDate {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--elegant-muted);
+}
+
+/* Hairline rule that draws across on load (motion optional). */
+.heroRule {
+  width: min(100%, 13rem);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--elegant-gold-line), transparent);
+  transform-origin: center;
+}
+
+/* --- Sections ----------------------------------------------------------- */
+
+.section {
+  display: grid;
+  gap: var(--space-6);
+  justify-items: center;
+  padding: var(--space-8) var(--space-4);
+  border-block: 1px solid var(--elegant-rule);
+}
+
+.sectionAlt {
+  background: linear-gradient(180deg, var(--elegant-ground-deep), var(--elegant-ground));
+}
+
+.narrow {
+  width: min(100%, 42rem);
+}
+
+/* --- Invitation wording -------------------------------------------------- */
+
+.invitationCard {
+  display: grid;
+  gap: var(--space-4);
+  justify-items: center;
+  text-align: center;
+  padding: clamp(var(--space-6), 6vw, var(--space-8))
+    clamp(var(--space-4), 5vw, var(--space-7));
+  border: 1px solid var(--elegant-rule);
+  background: var(--elegant-paper);
+  box-shadow: var(--shadow-sm);
+}
+
+.inviteLead {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--elegant-muted);
+}
+
+.inviteNames {
+  margin: 0;
+  font-size: var(--text-2xl);
+  overflow-wrap: anywhere;
+}
+
+.inviteNames span {
+  color: var(--elegant-gold);
+  font-style: italic;
+}
+
+.inviteRequest {
+  margin: 0;
+  max-width: 32rem;
+  font-size: var(--text-lg);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.inviteDate {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--elegant-gold);
+}
+
+.inviteRegion {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--elegant-muted);
+}
+
+.countdownPanel {
+  width: min(100%, 34rem);
+  padding-block: var(--space-5);
+  border-block: 1px solid var(--elegant-rule);
+}
+
+/* --- Celebrations: engraved list with dotted leaders --------------------- */
+
+.celebrationList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+}
+
+.eventEntry {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-5) 0;
+  border-bottom: 1px solid var(--elegant-rule);
+}
+
+.eventEntry:first-child {
+  padding-top: 0;
+}
+
+.eventEntry:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.eventTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: 0;
+  font-size: var(--text-lg);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.eventTitleRule {
+  flex: 1 1 0;
+  height: 1px;
+  background: var(--elegant-rule);
+}
+
+.leaderList {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.leaderRow {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.leaderLabel {
+  flex: 0 0 auto;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--elegant-muted);
+}
+
+.leaderValue {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+/* The dotted leader itself — decorative, so it is aria-hidden in markup. */
+.leaderDots {
+  flex: 1 1 auto;
+  min-width: 1.5rem;
+  border-bottom: 1px dotted var(--elegant-rule-strong);
+  transform: translateY(-0.3em);
+}
+
+.eventNote {
+  margin: 0;
+  font-size: var(--text-sm);
+  font-style: italic;
+  color: var(--elegant-muted);
+}
+
+/* --- Gallery: thin gold frames ------------------------------------------- */
+
+.galleryGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: var(--space-5);
+}
+
+.galleryFrame {
+  padding: var(--space-2);
+  border: 1px solid var(--elegant-rule-strong);
+  background: var(--elegant-paper);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .galleryFrame {
+    transition: box-shadow var(--duration-base) var(--ease-out);
+  }
+}
+
+.galleryFrame:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.galleryImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 1px solid var(--elegant-rule);
+}
+
+/* --- Closing ------------------------------------------------------------- */
+
+.closing {
+  display: grid;
+  gap: var(--space-4);
+  justify-items: center;
+  text-align: center;
+  width: min(100%, 38rem);
+}
+
+.closingNames {
+  margin: 0;
+  font-size: var(--text-2xl);
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.closingNames span {
+  color: var(--elegant-gold);
+  font-style: italic;
+}
+
+.closingLine {
+  margin: 0;
+  max-width: 32rem;
+  font-size: var(--text-lg);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.closingDemoNote {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--elegant-muted);
+}
+
+/* --- Motion: understated fades only, opt-out via reduced motion ----------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .plate {
+    animation: ec-plate-in var(--duration-slow) var(--ease-out) both;
+  }
+
+  .heroRule {
+    animation: ec-rule-in var(--duration-slow) var(--ease-out) both;
+  }
+
+  @keyframes ec-plate-in {
+    from {
+      opacity: 0;
+      transform: translateY(0.75rem);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes ec-rule-in {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+}
+
+/* --- Responsive: 375px → 1440px, no horizontal overflow ------------------- */
+
+@media (max-width: 640px) {
+  .section {
+    gap: var(--space-5);
+    padding: var(--space-7) var(--space-4);
+  }
+
+  .plateInner {
+    gap: var(--space-3);
+  }
+
+  .eventTitle {
+    gap: var(--space-2);
+  }
+
+  .leaderRow,
+  .leaderValue {
+    gap: var(--space-1);
+  }
+}
+
+@media (min-width: 960px) {
+  .section {
+    padding: var(--space-9) var(--space-6);
+  }
+
+  .galleryGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero {
+    padding-block: var(--space-9);
+  }
+}

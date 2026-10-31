@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Sample artwork — hanging lanterns glowing on an emerald ground</title>
+  <defs>
+    <linearGradient id="rh4-ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a3b2d" />
+      <stop offset="1" stop-color="#06281e" />
+    </linearGradient>
+    <radialGradient id="rh4-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#e9d9ae" stop-opacity="0.4" />
+      <stop offset="1" stop-color="#e9d9ae" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Emerald ground -->
+  <rect width="800" height="600" fill="url(#rh4-ground)" />
+
+  <!-- Ceremonial double border -->
+  <rect x="24" y="24" width="752" height="552" rx="10" fill="none" stroke="#c9a24b" stroke-opacity="0.4" stroke-width="2" />
+  <rect x="36" y="36" width="728" height="528" rx="6" fill="none" stroke="#c9a24b" stroke-opacity="0.18" />
+
+  <!-- Ceiling rail -->
+  <line x1="80" y1="72" x2="720" y2="72" stroke="#c9a24b" stroke-opacity="0.55" stroke-width="2.5" />
+  <line x1="80" y1="80" x2="720" y2="80" stroke="#c9a24b" stroke-opacity="0.2" />
+
+  <!-- Glows -->
+  <circle cx="250" cy="258" r="105" fill="url(#rh4-glow)" />
+  <circle cx="550" cy="258" r="105" fill="url(#rh4-glow)" />
+  <circle cx="400" cy="242" r="135" fill="url(#rh4-glow)" />
+
+  <!-- Chains -->
+  <g stroke="#c9a24b" stroke-opacity="0.7" stroke-width="1.6" stroke-dasharray="7 6">
+    <line x1="250" y1="72" x2="250" y2="192" />
+    <line x1="550" y1="72" x2="550" y2="192" />
+    <line x1="400" y1="72" x2="400" y2="152" />
+  </g>
+
+  <!-- Left lantern -->
+  <g>
+    <path d="M232 192 H 268 L 262 206 H 238 Z" fill="#c9a24b" fill-opacity="0.85" />
+    <path d="M250 206 L 288 230 L 288 288 L 250 312 L 212 288 L 212 230 Z" fill="#0f4a37" fill-opacity="0.8" stroke="#c9a24b" stroke-width="2.2" />
+    <path d="M250 216 L 279 234 L 279 284 L 250 302 L 221 284 L 221 234 Z" fill="none" stroke="#c9a24b" stroke-opacity="0.45" />
+    <line x1="221" y1="252" x2="279" y2="252" stroke="#c9a24b" stroke-opacity="0.5" />
+    <line x1="221" y1="268" x2="279" y2="268" stroke="#c9a24b" stroke-opacity="0.5" />
+    <line x1="250" y1="312" x2="250" y2="328" stroke="#c9a24b" stroke-opacity="0.8" stroke-width="1.6" />
+    <circle cx="250" cy="334" r="6" fill="#c9a24b" fill-opacity="0.85" />
+  </g>
+
+  <!-- Right lantern (mirror of the left) -->
+  <g>
+    <path d="M532 192 H 568 L 562 206 H 538 Z" fill="#c9a24b" fill-opacity="0.85" />
+    <path d="M550 206 L 588 230 L 588 288 L 550 312 L 512 288 L 512 230 Z" fill="#0f4a37" fill-opacity="0.8" stroke="#c9a24b" stroke-width="2.2" />
+    <path d="M550 216 L 579 234 L 579 284 L 550 302 L 521 284 L 521 234 Z" fill="none" stroke="#c9a24b" stroke-opacity="0.45" />
+    <line x1="521" y1="252" x2="579" y2="252" stroke="#c9a24b" stroke-opacity="0.5" />
+    <line x1="521" y1="268" x2="579" y2="268" stroke="#c9a24b" stroke-opacity="0.5" />
+    <line x1="550" y1="312" x2="550" y2="328" stroke="#c9a24b" stroke-opacity="0.8" stroke-width="1.6" />
+    <circle cx="550" cy="334" r="6" fill="#c9a24b" fill-opacity="0.85" />
+  </g>
+
+  <!-- Centre lantern -->
+  <g>
+    <path d="M374 152 H 426 L 418 170 H 382 Z" fill="#c9a24b" fill-opacity="0.9" />
+    <path d="M400 170 L 452 204 L 452 284 L 400 318 L 348 284 L 348 204 Z" fill="#0f4a37" fill-opacity="0.85" stroke="#c9a24b" stroke-width="2.6" />
+    <path d="M400 182 L 441 209 L 441 279 L 400 306 L 359 279 L 359 209 Z" fill="none" stroke="#c9a24b" stroke-opacity="0.5" />
+    <line x1="359" y1="234" x2="441" y2="234" stroke="#c9a24b" stroke-opacity="0.55" />
+    <line x1="359" y1="258" x2="441" y2="258" stroke="#c9a24b" stroke-opacity="0.55" />
+    <g transform="translate(400 246)">
+      <circle r="14" fill="none" stroke="#c9a24b" stroke-opacity="0.8" />
+      <circle r="4" fill="#c9a24b" />
+    </g>
+    <line x1="400" y1="318" x2="400" y2="338" stroke="#c9a24b" stroke-opacity="0.85" stroke-width="1.8" />
+    <circle cx="400" cy="346" r="8" fill="#c9a24b" fill-opacity="0.9" />
+  </g>
+
+  <!-- Ground line -->
+  <line x1="80" y1="540" x2="720" y2="540" stroke="#c9a24b" stroke-opacity="0.2" />
+  <g fill="#c9a24b" fill-opacity="0.35">
+    <rect x="245" y="500" width="10" height="10" transform="rotate(45 250 505)" />
+    <rect x="395" y="500" width="10" height="10" transform="rotate(45 400 505)" />
+    <rect x="545" y="500" width="10" height="10" transform="rotate(45 550 505)" />
+  </g>
+</svg>

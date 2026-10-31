@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Placeholder artwork: laurel sprig composition">
+  <defs>
+    <!-- Right-hand laurel sprig; the left is this group mirrored. -->
+    <g id="ec03-sprig">
+      <path d="M400 490 C 460 482 530 438 592 340" fill="none" stroke="#b8934f" stroke-width="2.5" stroke-linecap="round"/>
+      <g fill="#8a6a2b">
+        <ellipse cx="428" cy="464" rx="24" ry="9" transform="rotate(-45 428 464)"/>
+        <ellipse cx="466" cy="442" rx="24" ry="9" transform="rotate(-45 466 442)"/>
+        <ellipse cx="502" cy="414" rx="23" ry="9" transform="rotate(-45 502 414)"/>
+        <ellipse cx="536" cy="382" rx="22" ry="8" transform="rotate(-45 536 382)"/>
+        <ellipse cx="566" cy="344" rx="21" ry="8" transform="rotate(-45 566 344)"/>
+        <ellipse cx="424" cy="488" rx="22" ry="8" transform="rotate(-18 424 488)"/>
+        <ellipse cx="462" cy="468" rx="22" ry="8" transform="rotate(-18 462 468)"/>
+        <ellipse cx="498" cy="442" rx="21" ry="8" transform="rotate(-18 498 442)"/>
+        <ellipse cx="532" cy="410" rx="20" ry="8" transform="rotate(-18 532 410)"/>
+        <ellipse cx="562" cy="374" rx="19" ry="7" transform="rotate(-18 562 374)"/>
+        <ellipse cx="594" cy="334" rx="16" ry="7" transform="rotate(-62 594 334)"/>
+      </g>
+    </g>
+  </defs>
+
+  <rect width="800" height="600" fill="#faf7f1"/>
+
+  <!-- Symmetric laurel composition -->
+  <use href="#ec03-sprig"/>
+  <use href="#ec03-sprig" transform="translate(800,0) scale(-1,1)"/>
+
+  <!-- Meeting ornament at the base of the sprigs -->
+  <g fill="#8a6a2b">
+    <path d="M400 494 410 504 400 514 390 504Z"/>
+  </g>
+
+  <!-- Top hairline rule with centred diamond -->
+  <g stroke="#b8934f" stroke-width="1">
+    <line x1="200" y1="140" x2="368" y2="140"/>
+    <line x1="432" y1="140" x2="600" y2="140"/>
+  </g>
+  <path d="M400 131 409 140 400 149 391 140Z" fill="#8a6a2b"/>
+
+  <!-- Sprig tip buds above the rule -->
+  <g fill="#8a6a2b" opacity="0.85">
+    <path d="M330 104 336 112 330 120 324 112Z"/>
+    <path d="M470 104 476 112 470 120 464 112Z"/>
+  </g>
+</svg>

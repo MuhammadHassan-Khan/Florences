@@ -1,0 +1,25 @@
+<!-- Minimal Modern plate 02 — arc composition (original placeholder artwork). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Placeholder artwork: concentric arc composition">
+  <rect width="800" height="600" fill="#ffffff"/>
+
+  <!-- Concentric arcs radiating from the lower-left origin -->
+  <g fill="none" stroke="#101014" stroke-width="1.5">
+    <circle cx="120" cy="540" r="90" stroke-opacity="0.7"/>
+    <circle cx="120" cy="540" r="160" stroke-opacity="0.55"/>
+    <circle cx="120" cy="540" r="230" stroke-opacity="0.42"/>
+    <circle cx="120" cy="540" r="300" stroke-opacity="0.3"/>
+    <circle cx="120" cy="540" r="440" stroke-opacity="0.16"/>
+  </g>
+
+  <!-- The single accent arc -->
+  <circle cx="120" cy="540" r="370" fill="none" stroke="#b4472f" stroke-width="3"/>
+
+  <!-- Ground lines and origin -->
+  <line x1="0" y1="540" x2="800" y2="540" stroke="#101014" stroke-opacity="0.5" stroke-width="1.5"/>
+  <line x1="620" y1="60" x2="620" y2="540" stroke="#101014" stroke-opacity="0.3" stroke-width="1"/>
+  <circle cx="120" cy="540" r="8" fill="#101014"/>
+
+  <!-- Counterweight blocks -->
+  <rect x="680" y="60" width="60" height="60" fill="#101014"/>
+  <rect x="680" y="140" width="60" height="14" fill="#b4472f"/>
+</svg>

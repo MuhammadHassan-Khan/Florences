@@ -1,0 +1,53 @@
+.heading {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.center {
+  justify-items: center;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  /* Templates set --heading-accent on their root to carry their own
+     identity; the gold default keeps the neutral baseline attractive. */
+  color: var(--heading-accent, var(--color-gold-deep));
+}
+
+.title {
+  font-size: var(--text-xl);
+}
+
+.ornament {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.ornamentLine {
+  width: 3rem;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--heading-accent, var(--color-gold))
+  );
+}
+
+.ornamentLine:first-child {
+  background: linear-gradient(
+    90deg,
+    var(--heading-accent, var(--color-gold)),
+    transparent
+  );
+}
+
+.ornamentDiamond {
+  width: 7px;
+  height: 7px;
+  rotate: 45deg;
+  background: var(--heading-accent, var(--color-gold));
+}

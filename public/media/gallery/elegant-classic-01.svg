@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Placeholder artwork: engraved double-rule frame with monogram">
+  <rect width="800" height="600" fill="#faf7f1"/>
+
+  <!-- Engraved double-rule frame -->
+  <rect x="28" y="28" width="744" height="544" fill="none" stroke="#b8934f" stroke-width="3"/>
+  <rect x="42" y="42" width="716" height="516" fill="none" stroke="#b8934f" stroke-width="1" stroke-opacity="0.8"/>
+
+  <!-- Corner diamonds on the inner rule -->
+  <g fill="#8a6a2b">
+    <path d="M42 34 50 42 42 50 34 42Z"/>
+    <path d="M758 34 766 42 758 50 750 42Z"/>
+    <path d="M42 550 50 558 42 566 34 558Z"/>
+    <path d="M758 550 766 558 758 566 750 558Z"/>
+  </g>
+
+  <!-- Top and bottom hairline rules with centred diamonds -->
+  <g stroke="#b8934f" stroke-width="1">
+    <line x1="190" y1="130" x2="368" y2="130"/>
+    <line x1="432" y1="130" x2="610" y2="130"/>
+    <line x1="190" y1="470" x2="368" y2="470"/>
+    <line x1="432" y1="470" x2="610" y2="470"/>
+  </g>
+  <g fill="#8a6a2b">
+    <path d="M400 122 408 130 400 138 392 130Z"/>
+    <path d="M400 462 408 470 400 478 392 470Z"/>
+  </g>
+
+  <!-- Monogram medallion -->
+  <g fill="none" stroke="#8a6a2b">
+    <circle cx="400" cy="300" r="86" stroke-width="2"/>
+    <circle cx="400" cy="300" r="76" stroke-width="1" stroke-opacity="0.7"/>
+  </g>
+  <text x="400" y="332" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="86" fill="#8a6a2b">&amp;</text>
+
+  <!-- Small sprigs inside the medallion base -->
+  <g stroke="#b8934f" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <path d="M352 356 C 366 364 380 368 392 368"/>
+    <path d="M448 356 C 434 364 420 368 408 368"/>
+  </g>
+</svg>

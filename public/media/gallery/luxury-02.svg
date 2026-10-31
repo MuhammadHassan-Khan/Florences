@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Placeholder artwork: candlelight still life">
+  <defs>
+    <linearGradient id="c2-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1216"/>
+      <stop offset="1" stop-color="#0d0b0e"/>
+    </linearGradient>
+    <radialGradient id="c2-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffdf9e" stop-opacity="0.85"/>
+      <stop offset="0.5" stop-color="#f2b45c" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#f2b45c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="c2-wax" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#efe4d0"/>
+      <stop offset="0.5" stop-color="#fdf8ec"/>
+      <stop offset="1" stop-color="#d8c9ae"/>
+    </linearGradient>
+    <filter id="c2-soft" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#c2-bg)"/>
+
+  <!-- table line -->
+  <path d="M0 470 H800" stroke="#c9a24b" stroke-opacity="0.25" stroke-width="2"/>
+
+  <!-- glow pools -->
+  <g filter="url(#c2-soft)">
+    <circle cx="270" cy="300" r="120" fill="url(#c2-glow)" opacity="0.5"/>
+    <circle cx="520" cy="330" r="150" fill="url(#c2-glow)" opacity="0.42"/>
+    <circle cx="660" cy="380" r="80" fill="url(#c2-glow)" opacity="0.3"/>
+  </g>
+
+  <!-- candles -->
+  <g>
+    <rect x="245" y="330" width="50" height="140" rx="8" fill="url(#c2-wax)"/>
+    <rect x="266" y="310" width="8" height="24" fill="#3a2f28"/>
+    <ellipse cx="270" cy="300" rx="13" ry="22" fill="#ffcf6e"/>
+    <ellipse cx="270" cy="304" rx="6" ry="12" fill="#fff3cf"/>
+  </g>
+  <g>
+    <rect x="490" y="360" width="62" height="110" rx="9" fill="url(#c2-wax)"/>
+    <rect x="517" y="338" width="8" height="26" fill="#3a2f28"/>
+    <ellipse cx="521" cy="326" rx="15" ry="26" fill="#ffcf6e"/>
+    <ellipse cx="521" cy="331" rx="7" ry="14" fill="#fff3cf"/>
+  </g>
+  <g>
+    <rect x="640" y="398" width="40" height="72" rx="7" fill="url(#c2-wax)"/>
+    <rect x="656" y="382" width="7" height="18" fill="#3a2f28"/>
+    <ellipse cx="659" cy="372" rx="11" ry="18" fill="#ffcf6e"/>
+    <ellipse cx="659" cy="376" rx="5" ry="10" fill="#fff3cf"/>
+  </g>
+
+  <!-- petal accents -->
+  <g fill="#b8687a" opacity="0.65">
+    <ellipse cx="180" cy="462" rx="26" ry="9"/>
+    <ellipse cx="360" cy="474" rx="20" ry="7"/>
+    <ellipse cx="600" cy="478" rx="24" ry="8"/>
+  </g>
+</svg>

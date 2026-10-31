@@ -1,0 +1,4 @@
+# FLORENCES — demo showcase site.
+# Local build only; no public deployment has been approved.
+User-agent: *
+Allow: /

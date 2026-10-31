@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Royal Heritage preview artwork">
+  <defs>
+    <linearGradient id="rh-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a322b"/>
+      <stop offset="1" stop-color="#0e4438"/>
+    </linearGradient>
+    <pattern id="rh-jaali" width="44" height="44" patternUnits="userSpaceOnUse">
+      <g stroke="#d8b56a" stroke-opacity="0.28" stroke-width="1.1" fill="none">
+        <path d="M22 0 L44 22 L22 44 L0 22 Z"/>
+        <path d="M0 0 L44 44 M44 0 L0 44" stroke-opacity="0.12"/>
+        <circle cx="22" cy="22" r="3.5" stroke-opacity="0.4"/>
+      </g>
+    </pattern>
+  </defs>
+
+  <rect width="640" height="400" fill="url(#rh-bg)"/>
+  <rect width="640" height="400" fill="url(#rh-jaali)"/>
+
+  <!-- multifoil arch -->
+  <g fill="none" stroke="#d8b56a" stroke-width="3.5" stroke-linecap="round">
+    <path d="M232 348 V 244 C 232 192, 264 150, 320 92 C 376 150, 408 192, 408 244 V 348"/>
+    <path d="M252 348 V 250 C 252 206, 280 170, 320 122 C 360 170, 388 206, 388 250 V 348" stroke-width="1.6" stroke-opacity="0.7"/>
+  </g>
+
+  <!-- hanging lamp -->
+  <g stroke="#d8b56a" stroke-width="1.6" fill="none" opacity="0.9">
+    <path d="M320 150 V 196"/>
+    <path d="M310 210 L320 196 L330 210 Z" fill="#d8b56a" stroke="none"/>
+    <circle cx="320" cy="222" r="12" fill="#f0d79a" fill-opacity="0.85" stroke="none"/>
+    <circle cx="320" cy="222" r="20" fill="#f0d79a" fill-opacity="0.18" stroke="none"/>
+  </g>
+
+  <!-- base line + frame -->
+  <path d="M180 348 H 460" stroke="#d8b56a" stroke-width="3"/>
+  <rect x="16" y="16" width="608" height="368" rx="4" fill="none" stroke="#d8b56a" stroke-opacity="0.55" stroke-width="1.5"/>
+</svg>

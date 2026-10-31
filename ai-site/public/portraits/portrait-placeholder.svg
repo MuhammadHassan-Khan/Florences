@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 900" role="img" aria-label="Founder portrait placeholder — add photograph">
+  <defs>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0v48" fill="none" stroke="#F2F1EC" stroke-opacity="0.045" stroke-width="1" />
+    </pattern>
+    <radialGradient id="glow" cx="50%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#AEE838" stop-opacity="0.10" />
+      <stop offset="100%" stop-color="#AEE838" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="720" height="900" fill="#111318" />
+  <rect width="720" height="900" fill="url(#grid)" />
+  <rect width="720" height="900" fill="url(#glow)" />
+
+  <!-- Dashed photo frame -->
+  <rect x="40" y="40" width="640" height="820" rx="18" fill="none" stroke="#AEE838" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="10 10" />
+
+  <!-- Corner ticks -->
+  <path d="M40 84V40h44M636 40h44v44M680 816v44h-44M84 860H40v-44" fill="none" stroke="#AEE838" stroke-width="3" />
+
+  <!-- Silhouette -->
+  <circle cx="360" cy="330" r="96" fill="#1A1D24" stroke="#2A2E36" stroke-width="2" />
+  <path d="M180 640c0-99 80-180 180-180s180 81 180 180v40H180z" fill="#1A1D24" stroke="#2A2E36" stroke-width="2" />
+
+  <!-- Placeholder badge -->
+  <rect x="72" y="72" width="228" height="36" rx="18" fill="#0A0B0D" fill-opacity="0.85" stroke="#AEE838" stroke-opacity="0.5" stroke-width="1.5" />
+  <text x="186" y="95" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="14" font-weight="700" letter-spacing="3" fill="#AEE838">PORTRAIT PLACEHOLDER</text>
+
+  <!-- Labels -->
+  <text x="360" y="726" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="15" font-weight="600" letter-spacing="5" fill="#AEE838">FOUNDER PORTRAIT</text>
+  <text x="360" y="766" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="30" font-weight="700" fill="#F2F1EC">Hassan Khan</text>
+  <text x="360" y="796" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="17" fill="#A9ADB6">AI builder &amp; educator</text>
+
+  <text x="360" y="830" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13.5" fill="#858A94">Add your photo at public/portraits/hassan-khan.jpg</text>
+</svg>

@@ -1,0 +1,348 @@
+/*
+ * Luxury Cinematic — dark gold-lit, film-style identity.
+ * Template-scoped: overrides shared tokens locally, never mutates them.
+ */
+
+.template {
+  background: var(--color-ink);
+  color: var(--color-ivory);
+}
+
+/* Anchor offset so the sticky header never covers the scroll target. */
+#invitation-intro {
+  scroll-margin-top: calc(var(--header-height) + 0.5rem);
+}
+
+/* --- Hero ------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  min-height: calc(100svh - var(--header-height));
+  padding: var(--space-7) var(--space-4);
+  overflow: hidden;
+  text-align: center;
+}
+
+.heroBackdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 45% at 70% 12%, rgba(240, 194, 113, 0.26), transparent 60%),
+    radial-gradient(ellipse 55% 40% at 18% 85%, rgba(184, 104, 122, 0.14), transparent 65%),
+    linear-gradient(160deg, #0b0b10 0%, #17131a 55%, #1d1510 100%);
+}
+
+.sweep {
+  position: absolute;
+  top: -30%;
+  left: -40%;
+  width: 55%;
+  height: 160%;
+  background: linear-gradient(100deg, transparent, rgba(255, 230, 176, 0.16), transparent);
+  transform: rotate(12deg);
+  filter: blur(8px);
+  animation: lc-sweep 11s var(--ease-in-out) infinite alternate;
+}
+
+@keyframes lc-sweep {
+  from {
+    transform: translateX(-10%) rotate(12deg);
+  }
+  to {
+    transform: translateX(220%) rotate(12deg);
+  }
+}
+
+.bokeh {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(240, 194, 113, 0.55), transparent 70%);
+  animation: lc-float 9s ease-in-out infinite alternate;
+}
+
+.bokehOne {
+  width: 90px;
+  height: 90px;
+  top: 18%;
+  left: 12%;
+  opacity: 0.35;
+}
+
+.bokehTwo {
+  width: 46px;
+  height: 46px;
+  top: 62%;
+  left: 78%;
+  opacity: 0.4;
+  animation-duration: 12s;
+}
+
+.bokehThree {
+  width: 26px;
+  height: 26px;
+  top: 30%;
+  left: 66%;
+  opacity: 0.5;
+  animation-duration: 7s;
+}
+
+@keyframes lc-float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-24px);
+  }
+}
+
+.heroRings {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: rgba(201, 162, 75, 0.14);
+  pointer-events: none;
+}
+
+.heroRings svg {
+  width: min(72vw, 34rem);
+  height: auto;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: var(--space-4);
+  justify-items: center;
+  animation: lc-fade-in 1.1s var(--ease-out) both;
+}
+
+@keyframes lc-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.demoBadge {
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid rgba(201, 162, 75, 0.5);
+  border-radius: var(--radius-full);
+  background: rgba(16, 16, 20, 0.4);
+  color: var(--color-gold-soft);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.heroEyebrow {
+  font-size: var(--text-xs);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.heroNames {
+  display: grid;
+  gap: 0.08em;
+  font-size: var(--text-hero);
+  font-weight: 500;
+  line-height: 1.04;
+}
+
+.heroNames span {
+  display: block;
+}
+
+.heroAmp {
+  color: var(--color-gold);
+  font-size: 0.42em;
+  font-style: italic;
+  line-height: 1.2;
+}
+
+.heroDate {
+  font-size: var(--text-sm);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-gold-soft);
+}
+
+.scrollCue {
+  display: inline-grid;
+  gap: var(--space-1);
+  justify-items: center;
+  margin-top: var(--space-5);
+  font-size: var(--text-xs);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: inherit;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.scrollCue:hover {
+  opacity: 1;
+}
+
+.scrollArrow {
+  animation: lc-bounce 1.9s ease-in-out infinite;
+}
+
+@keyframes lc-bounce {
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+/* --- Sections --------------------------------------------------------- */
+
+.section {
+  display: grid;
+  gap: var(--space-6);
+  justify-items: center;
+  padding: var(--space-8) var(--space-4);
+}
+
+.sectionRaised {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012));
+  border-block: 1px solid rgba(201, 162, 75, 0.16);
+}
+
+.fullWidth {
+  width: min(100%, var(--content-default));
+}
+
+/* --- Invitation frame -------------------------------------------------- */
+
+.introFrame {
+  display: grid;
+  gap: var(--space-4);
+  justify-items: center;
+  text-align: center;
+  width: min(100%, 46rem);
+  padding: var(--space-7) var(--space-5);
+  border: 1px solid rgba(201, 162, 75, 0.4);
+  border-radius: var(--radius-lg);
+  background: radial-gradient(130% 110% at 50% 0%, rgba(201, 162, 75, 0.1), transparent 62%);
+}
+
+.sectionEyebrow {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-gold-soft);
+  opacity: 0.9;
+}
+
+.inviteLead {
+  font-size: var(--text-md);
+  opacity: 0.85;
+}
+
+.inviteNames {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  color: var(--color-gold-soft);
+}
+
+.inviteNames span {
+  color: var(--color-gold);
+  font-style: italic;
+}
+
+.inviteRequest {
+  max-width: 30rem;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-style: italic;
+  line-height: 1.7;
+  opacity: 0.92;
+}
+
+.inviteDate {
+  font-size: var(--text-sm);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold-soft);
+}
+
+/* --- Gallery ----------------------------------------------------------- */
+
+.galleryGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: var(--space-4);
+}
+
+.galleryItem {
+  aspect-ratio: 4 / 3;
+  border: 1px solid rgba(201, 162, 75, 0.25);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.galleryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-base) var(--ease-out);
+}
+
+.galleryItem:hover .galleryImage {
+  transform: scale(1.04);
+}
+
+/* --- Closing ------------------------------------------------------------ */
+
+.closing {
+  display: grid;
+  gap: var(--space-4);
+  justify-items: center;
+  text-align: center;
+}
+
+.closingNames {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--color-gold-soft);
+}
+
+.closingNames span {
+  color: var(--color-gold);
+  font-style: italic;
+}
+
+.closingLine {
+  max-width: 34rem;
+  font-size: var(--text-md);
+  opacity: 0.85;
+}
+
+.closingDemoNote {
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: var(--space-7) var(--space-4);
+  }
+
+  .introFrame {
+    padding: var(--space-6) var(--space-4);
+  }
+}

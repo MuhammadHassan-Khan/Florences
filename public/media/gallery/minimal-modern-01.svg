@@ -1,0 +1,33 @@
+<!-- Minimal Modern plate 01 — thin rule grid study (original placeholder artwork). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Placeholder artwork: thin rule grid study">
+  <rect width="800" height="600" fill="#ffffff"/>
+
+  <!-- Asymmetric column rules -->
+  <g stroke="#101014" stroke-opacity="0.16" stroke-width="1">
+    <line x1="80" y1="40" x2="80" y2="560"/>
+    <line x1="200" y1="40" x2="200" y2="560"/>
+    <line x1="360" y1="40" x2="360" y2="560"/>
+    <line x1="520" y1="40" x2="520" y2="560"/>
+    <line x1="600" y1="40" x2="600" y2="560"/>
+    <line x1="720" y1="40" x2="720" y2="560"/>
+  </g>
+
+  <!-- Row rules -->
+  <g stroke="#101014" stroke-opacity="0.16" stroke-width="1">
+    <line x1="40" y1="120" x2="760" y2="120"/>
+    <line x1="40" y1="300" x2="760" y2="300"/>
+    <line x1="40" y1="440" x2="760" y2="440"/>
+  </g>
+
+  <!-- One accent rule interrupts the grid -->
+  <line x1="520" y1="40" x2="520" y2="560" stroke="#b4472f" stroke-width="3"/>
+
+  <!-- Solid mass and outline set on the intersections -->
+  <rect x="200" y="300" width="160" height="140" fill="#101014"/>
+  <circle cx="600" cy="300" r="56" fill="none" stroke="#101014" stroke-width="2"/>
+  <rect x="680" y="480" width="40" height="40" fill="#b4472f"/>
+
+  <!-- Registration marks -->
+  <rect x="74" y="114" width="12" height="12" fill="#101014"/>
+  <rect x="354" y="434" width="12" height="12" fill="#101014"/>
+</svg>

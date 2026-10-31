@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Placeholder artwork: letterpress plate with debossed border">
+  <rect width="800" height="600" fill="#f4efe4"/>
+
+  <!-- Debossed outer border: light edge outside, dark edge inside -->
+  <g fill="none" stroke-width="2.5">
+    <rect x="34" y="34" width="732" height="532" stroke="#ffffff" stroke-opacity="0.9"/>
+    <rect x="38" y="38" width="724" height="524" stroke="#bfae84" stroke-opacity="0.9"/>
+  </g>
+
+  <!-- Pressed inner plate impression -->
+  <g fill="none" stroke-width="1.5">
+    <rect x="118" y="88" width="564" height="424" stroke="#ffffff" stroke-opacity="0.8"/>
+    <rect x="122" y="92" width="556" height="416" stroke="#c3b28a" stroke-opacity="0.9"/>
+  </g>
+
+  <!-- Blind-embossed seal -->
+  <circle cx="400" cy="300" r="72" fill="#efe7d6" stroke="#ffffff" stroke-opacity="0.75" stroke-width="1.5"/>
+  <circle cx="400" cy="301" r="63" fill="none" stroke="#c3b28a" stroke-width="1"/>
+  <path d="M400 284 416 300 400 316 384 300Z" fill="none" stroke="#bfae84" stroke-width="1.5"/>
+
+  <!-- Letterpress rules and diamonds above and below the seal -->
+  <g stroke="#bfae84" stroke-width="1.5">
+    <line x1="250" y1="196" x2="372" y2="196"/>
+    <line x1="428" y1="196" x2="550" y2="196"/>
+    <line x1="250" y1="404" x2="372" y2="404"/>
+    <line x1="428" y1="404" x2="550" y2="404"/>
+  </g>
+  <g fill="#bfae84">
+    <path d="M400 189 407 196 400 203 393 196Z"/>
+    <path d="M400 397 407 404 400 411 393 404Z"/>
+  </g>
+
+  <!-- Corner registration ticks -->
+  <g stroke="#c3b28a" stroke-width="1">
+    <path d="M140 118 v18 M140 118 h18"/>
+    <path d="M660 118 v18 M660 118 h-18"/>
+    <path d="M140 482 v-18 M140 482 h18"/>
+    <path d="M660 482 v-18 M660 482 h-18"/>
+  </g>
+</svg>

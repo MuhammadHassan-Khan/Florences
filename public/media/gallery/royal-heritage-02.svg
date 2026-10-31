@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Sample artwork — jaali lattice pattern in antique gold over emerald</title>
+  <defs>
+    <linearGradient id="rh2-ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a3b2d" />
+      <stop offset="1" stop-color="#06281e" />
+    </linearGradient>
+    <pattern id="rh2-jaali" width="96" height="96" patternUnits="userSpaceOnUse">
+      <g fill="none" stroke="#c9a24b" stroke-opacity="0.55" stroke-width="1.4">
+        <circle cx="48" cy="48" r="30" />
+        <rect x="31" y="31" width="34" height="34" transform="rotate(45 48 48)" />
+        <path d="M0 48 H 96 M48 0 V 96" />
+        <circle cx="0" cy="0" r="7" />
+        <circle cx="96" cy="0" r="7" />
+        <circle cx="0" cy="96" r="7" />
+        <circle cx="96" cy="96" r="7" />
+      </g>
+    </pattern>
+  </defs>
+
+  <!-- Emerald ground -->
+  <rect width="800" height="600" fill="url(#rh2-ground)" />
+
+  <!-- Ceremonial double border -->
+  <rect x="24" y="24" width="752" height="552" rx="10" fill="none" stroke="#c9a24b" stroke-opacity="0.4" stroke-width="2" />
+  <rect x="36" y="36" width="728" height="528" rx="6" fill="none" stroke="#c9a24b" stroke-opacity="0.18" />
+
+  <!-- Lattice field -->
+  <rect x="60" y="60" width="680" height="480" fill="url(#rh2-jaali)" />
+
+  <!-- Arched aperture over the lattice -->
+  <path d="M300 520 V 330 Q 300 200 400 130 Q 500 200 500 330 V 520" fill="#0a3b2d" fill-opacity="0.85" stroke="#c9a24b" stroke-width="3" />
+  <path d="M328 520 V 338 Q 328 222 400 164 Q 472 222 472 338 V 520" fill="none" stroke="#c9a24b" stroke-opacity="0.5" stroke-width="1.5" />
+
+  <!-- Keystone rosette -->
+  <g transform="translate(400 246)">
+    <circle r="22" fill="none" stroke="#c9a24b" stroke-opacity="0.7" />
+    <path d="M0 -20 L6 -6 L20 0 L6 6 L0 20 L-6 6 L-20 0 L-6 -6 Z" fill="#c9a24b" fill-opacity="0.5" />
+    <circle r="5" fill="#c9a24b" fill-opacity="0.85" />
+  </g>
+
+  <!-- Plinth -->
+  <rect x="278" y="520" width="244" height="10" fill="#c9a24b" fill-opacity="0.5" />
+  <line x1="60" y1="540" x2="740" y2="540" stroke="#c9a24b" stroke-opacity="0.2" />
+</svg>

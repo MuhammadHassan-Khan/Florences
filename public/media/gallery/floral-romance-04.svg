@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Sample artwork — a gentle rose and sage colour wash">
+  <defs>
+    <linearGradient id="fr4-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fdfaf6"/>
+      <stop offset="0.5" stop-color="#faf1ec"/>
+      <stop offset="1" stop-color="#f3f3ea"/>
+    </linearGradient>
+    <filter id="fr4-soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="42"/>
+    </filter>
+    <filter id="fr4-softer" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="70"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#fr4-bg)"/>
+
+  <!-- watercolour washes -->
+  <g filter="url(#fr4-softer)">
+    <ellipse cx="250" cy="180" rx="240" ry="170" fill="#efc3cc" opacity="0.75"/>
+    <ellipse cx="620" cy="420" rx="260" ry="185" fill="#bcc7b4" opacity="0.65"/>
+    <ellipse cx="640" cy="130" rx="180" ry="130" fill="#f6dcd4" opacity="0.7"/>
+    <ellipse cx="150" cy="480" rx="200" ry="140" fill="#e9d9c4" opacity="0.55"/>
+  </g>
+  <g filter="url(#fr4-soft)">
+    <ellipse cx="400" cy="330" rx="150" ry="110" fill="#ffffff" opacity="0.55"/>
+    <ellipse cx="330" cy="120" rx="90" ry="70" fill="#d98ea0" opacity="0.28"/>
+    <ellipse cx="540" cy="520" rx="110" ry="70" fill="#7d8c77" opacity="0.22"/>
+  </g>
+
+  <!-- a faint sprig resting on the wash -->
+  <g fill="none" stroke="#5d6b57" stroke-opacity="0.5" stroke-linecap="round">
+    <path d="M70 540 C 170 500, 250 448, 330 372" stroke-width="4"/>
+    <path d="M214 470 C 226 442, 250 422, 280 412" stroke-width="2.5"/>
+    <path d="M286 410 C 300 434, 300 462, 286 486" stroke-width="2.5"/>
+  </g>
+  <g fill="#7d8c77" fill-opacity="0.55">
+    <path d="M214 470 C 196 452, 200 424, 224 412 C 236 434, 232 456, 214 470 Z"/>
+    <path d="M280 412 C 300 396, 330 402, 338 424 C 316 436, 292 430, 280 412 Z"/>
+    <path d="M286 486 C 268 470, 270 444, 292 432 C 304 454, 302 472, 286 486 Z"/>
+    <path d="M148 512 C 130 496, 134 470, 158 458 C 170 480, 166 500, 148 512 Z"/>
+  </g>
+  <g>
+    <circle cx="330" cy="372" r="16" fill="#d98ea0" opacity="0.75"/>
+    <circle cx="330" cy="372" r="6" fill="#e6c173" opacity="0.8"/>
+    <circle cx="70" cy="540" r="11" fill="#e8b3bf" opacity="0.7"/>
+  </g>
+
+  <!-- loose pigment flecks -->
+  <g opacity="0.5">
+    <circle cx="512" cy="238" r="6" fill="#d98ea0"/>
+    <circle cx="588" cy="304" r="4" fill="#d98ea0"/>
+    <circle cx="248" cy="330" r="5" fill="#7d8c77"/>
+    <circle cx="694" cy="252" r="5" fill="#c9798c"/>
+    <circle cx="120" cy="240" r="4" fill="#7d8c77"/>
+  </g>
+
+  <rect x="22" y="22" width="756" height="556" rx="12" fill="none" stroke="#b8687a" stroke-opacity="0.4" stroke-width="2"/>
+  <rect x="34" y="34" width="732" height="532" rx="8" fill="none" stroke="#7d8c77" stroke-opacity="0.25" stroke-width="1"/>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Placeholder artwork: hairline guilloche wave engraving">
+  <defs>
+    <path id="ec02-wave" d="M-40 300 C 60 220 140 380 240 300 S 420 220 520 300 S 700 380 840 300" fill="none"/>
+  </defs>
+
+  <rect width="800" height="600" fill="#faf7f1"/>
+
+  <!-- Hairline plate rules top and bottom -->
+  <g stroke="#b8934f" stroke-width="1.5">
+    <line x1="30" y1="40" x2="770" y2="40"/>
+    <line x1="30" y1="560" x2="770" y2="560"/>
+  </g>
+  <g stroke="#b8934f" stroke-width="0.75" stroke-opacity="0.7">
+    <line x1="30" y1="50" x2="770" y2="50"/>
+    <line x1="30" y1="550" x2="770" y2="550"/>
+  </g>
+
+  <!-- Guilloche weave: one wave set and its mirror, interlacing -->
+  <g stroke="#b8934f" stroke-width="1" stroke-opacity="0.6">
+    <use href="#ec02-wave" y="-240"/>
+    <use href="#ec02-wave" y="-210"/>
+    <use href="#ec02-wave" y="-180"/>
+    <use href="#ec02-wave" y="-150"/>
+    <use href="#ec02-wave" y="-120"/>
+    <use href="#ec02-wave" y="-90"/>
+    <use href="#ec02-wave" y="-60"/>
+    <use href="#ec02-wave" y="-30"/>
+    <use href="#ec02-wave"/>
+    <use href="#ec02-wave" y="30"/>
+    <use href="#ec02-wave" y="60"/>
+    <use href="#ec02-wave" y="90"/>
+    <use href="#ec02-wave" y="120"/>
+    <use href="#ec02-wave" y="150"/>
+    <use href="#ec02-wave" y="180"/>
+    <use href="#ec02-wave" y="210"/>
+    <use href="#ec02-wave" y="240"/>
+  </g>
+  <g stroke="#8a6a2b" stroke-width="1" stroke-opacity="0.35" transform="matrix(1 0 0 -1 0 600)">
+    <use href="#ec02-wave" y="-240"/>
+    <use href="#ec02-wave" y="-210"/>
+    <use href="#ec02-wave" y="-180"/>
+    <use href="#ec02-wave" y="-150"/>
+    <use href="#ec02-wave" y="-120"/>
+    <use href="#ec02-wave" y="-90"/>
+    <use href="#ec02-wave" y="-60"/>
+    <use href="#ec02-wave" y="-30"/>
+    <use href="#ec02-wave"/>
+    <use href="#ec02-wave" y="30"/>
+    <use href="#ec02-wave" y="60"/>
+    <use href="#ec02-wave" y="90"/>
+    <use href="#ec02-wave" y="120"/>
+    <use href="#ec02-wave" y="150"/>
+    <use href="#ec02-wave" y="180"/>
+    <use href="#ec02-wave" y="210"/>
+    <use href="#ec02-wave" y="240"/>
+  </g>
+
+  <!-- Centred lozenge to settle the weave -->
+  <path d="M400 284 416 300 400 316 384 300Z" fill="#faf7f1" stroke="#8a6a2b" stroke-width="1.5"/>
+</svg>

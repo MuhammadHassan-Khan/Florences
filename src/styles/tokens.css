@@ -1,0 +1,95 @@
+/*
+ * Design tokens — single source of truth for the shared visual language.
+ * Template-specific styles may override these locally, but should not
+ * duplicate raw values.
+ *
+ * Breakpoints (use directly in media queries, CSS variables cannot be used
+ * there):  640px (sm) | 960px (md) | 1280px (lg)
+ */
+
+:root {
+  /* --- Color: core palette ------------------------------------------- */
+  --color-ink: #101014;
+  --color-ink-soft: #26262e;
+  --color-ink-muted: #5b5b66;
+  --color-ivory: #faf7f1;
+  --color-ivory-deep: #f1ebdf;
+  --color-paper: #ffffff;
+  --color-gold: #c9a24b;
+  /* --color-gold-deep is used for small text on light backgrounds, so it
+     must clear WCAG AA (4.5:1): #8a6a24 scores 4.71 on ivory, 5.04 on
+     white. Do not lighten it without re-checking contrast (Lighthouse). */
+  --color-gold-deep: #8a6a24;
+  /* Darker gold for text that sits on an arbitrary tinted panel (the
+     demo-name chip floats above template backgrounds of unknown lightness,
+     where gold-deep can fall to 4.31:1). #7a5c1d keeps ≥5.3:1 everywhere. */
+  --color-gold-text: #7a5c1d;
+  --color-gold-soft: #e9d9ae;
+  --color-rose: #b8687a;
+  --color-sage: #7d8c77;
+  --color-line: rgba(16, 16, 20, 0.12);
+  --color-line-strong: rgba(16, 16, 20, 0.28);
+  --color-danger: #a12b2b;
+  --color-focus: #2f6fed;
+
+  /* --- Typography ----------------------------------------------------- */
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia,
+    "Times New Roman", serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.125rem;
+  --text-lg: clamp(1.25rem, 1.1rem + 0.8vw, 1.5rem);
+  --text-xl: clamp(1.5rem, 1.3rem + 1.2vw, 2rem);
+  --text-2xl: clamp(2rem, 1.6rem + 2vw, 2.75rem);
+  --text-hero: clamp(2.5rem, 1.8rem + 3.6vw, 4.5rem);
+
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.6;
+
+  --tracking-wide: 0.14em;
+  --tracking-normal: 0.01em;
+
+  /* --- Spacing scale --------------------------------------------------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  /* --- Layout ---------------------------------------------------------- */
+  --content-narrow: 44rem;
+  --content-default: 68rem;
+  --content-wide: 80rem;
+  --header-height: 4rem;
+
+  /* --- Shape, elevation ------------------------------------------------ */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+  --shadow-sm: 0 1px 2px rgba(16, 16, 20, 0.08);
+  --shadow-md: 0 10px 30px rgba(16, 16, 20, 0.1);
+  --shadow-lg: 0 24px 60px rgba(16, 16, 20, 0.18);
+
+  /* --- Motion ----------------------------------------------------------- */
+  --duration-fast: 160ms;
+  --duration-base: 280ms;
+  --duration-slow: 600ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* --- Stacking --------------------------------------------------------- */
+  --z-header: 100;
+  --z-overlay: 200;
+  --z-toast: 300;
+}

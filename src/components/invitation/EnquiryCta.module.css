@@ -1,0 +1,43 @@
+.cta {
+  display: grid;
+  gap: var(--space-3);
+  justify-items: center;
+  text-align: center;
+}
+
+.kicker {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-full);
+  /* Themable: templates set --cta-bg / --cta-fg on their root so the
+     primary action matches each design identity. */
+  background: var(--cta-bg, var(--color-gold));
+  color: var(--cta-fg, var(--color-ink));
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--duration-fast) var(--ease-out),
+    background-color var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  background: var(--cta-bg-hover, var(--color-gold-deep));
+  color: var(--cta-fg-hover, var(--color-ivory));
+}
+
+.note {
+  font-size: var(--text-xs);
+  opacity: 0.72;
+  max-width: 28rem;
+}

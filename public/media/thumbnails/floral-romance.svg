@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Floral Romance preview artwork">
+  <defs>
+    <linearGradient id="fr-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f9e8e4"/>
+      <stop offset="0.6" stop-color="#fbf2ec"/>
+      <stop offset="1" stop-color="#f6efe3"/>
+    </linearGradient>
+    <g id="fr-bloom">
+      <g fill="#d98ea0" opacity="0.85">
+        <ellipse cx="0" cy="-16" rx="9" ry="17"/>
+        <ellipse cx="0" cy="-16" rx="9" ry="17" transform="rotate(72)"/>
+        <ellipse cx="0" cy="-16" rx="9" ry="17" transform="rotate(144)"/>
+        <ellipse cx="0" cy="-16" rx="9" ry="17" transform="rotate(216)"/>
+        <ellipse cx="0" cy="-16" rx="9" ry="17" transform="rotate(288)"/>
+      </g>
+      <circle cx="0" cy="0" r="6" fill="#e6c173"/>
+    </g>
+    <g id="fr-bud">
+      <circle cx="0" cy="0" r="7" fill="#d98ea0" opacity="0.75"/>
+      <circle cx="0" cy="0" r="3" fill="#e6c173" opacity="0.9"/>
+    </g>
+  </defs>
+
+  <rect width="640" height="400" fill="url(#fr-bg)"/>
+
+  <!-- bottom-left botanical cluster -->
+  <g fill="none" stroke="#7d8c77" stroke-width="2.4" stroke-linecap="round">
+    <path d="M70 400 C 96 330, 92 274, 148 226"/>
+    <path d="M110 400 C 132 350, 168 322, 226 300"/>
+    <path d="M40 400 C 54 348, 44 306, 74 262"/>
+  </g>
+  <g fill="#7d8c77" opacity="0.8">
+    <path d="M148 226 q -34 -6 -44 -38 q 34 2 44 38"/>
+    <path d="M92 300 q -30 8 -52 -8 q 26 -16 52 8"/>
+    <path d="M74 262 q -26 -12 -30 -42 q 30 12 30 42"/>
+    <path d="M186 314 q -6 -30 18 -48 q 12 30 -18 48"/>
+  </g>
+  <use href="#fr-bloom" transform="translate(152 222) scale(1.25)"/>
+  <use href="#fr-bloom" transform="translate(78 258) scale(0.85)"/>
+  <use href="#fr-bud" transform="translate(232 296)"/>
+  <use href="#fr-bud" transform="translate(116 356) scale(0.8)"/>
+
+  <!-- top-right botanical cluster -->
+  <g fill="none" stroke="#7d8c77" stroke-width="2.4" stroke-linecap="round">
+    <path d="M578 0 C 552 70, 556 116, 502 160"/>
+    <path d="M612 40 C 592 96, 556 126, 496 148"/>
+  </g>
+  <g fill="#7d8c77" opacity="0.8">
+    <path d="M502 160 q 34 6 44 38 q -34 -2 -44 -38"/>
+    <path d="M556 116 q 30 -8 52 8 q -26 16 -52 -8"/>
+    <path d="M548 84 q 26 12 30 42 q -30 -12 -30 -42"/>
+  </g>
+  <use href="#fr-bloom" transform="translate(498 164) scale(1.1)"/>
+  <use href="#fr-bloom" transform="translate(574 76) scale(0.75)"/>
+  <use href="#fr-bud" transform="translate(470 140) scale(0.9)"/>
+
+  <!-- scattered petals -->
+  <g fill="#d98ea0" opacity="0.4">
+    <circle cx="300" cy="70" r="4"/>
+    <circle cx="360" cy="330" r="5"/>
+    <circle cx="440" cy="220" r="3"/>
+    <circle cx="250" cy="160" r="3"/>
+  </g>
+  <g fill="#e6c173" opacity="0.6">
+    <circle cx="330" cy="120" r="3"/>
+    <circle cx="300" cy="360" r="3"/>
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+.demoWrap {
+  display: grid;
+  gap: var(--space-5);
+  padding: var(--space-5) var(--space-4) 0;
+}
+
+.preparationDescription {
+  color: var(--color-ink-soft);
+  font-size: var(--text-md);
+}
+
+.preparationNote {
+  color: var(--color-ink-muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.enquireLink {
+  font-weight: 600;
+}

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Sample artwork — pressed petals in blush tones">
+  <defs>
+    <linearGradient id="fr1-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fdfaf6"/>
+      <stop offset="0.55" stop-color="#f9ece9"/>
+      <stop offset="1" stop-color="#f3f1e7"/>
+    </linearGradient>
+    <radialGradient id="fr1-blush" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#eec4cd" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#eec4cd" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fr1-sage" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#b9c4b1" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#b9c4b1" stop-opacity="0"/>
+    </radialGradient>
+    <path id="fr1-petal" d="M0 0 C 16 -20, 48 -24, 64 -4 C 48 18, 16 20, 0 4 Z"/>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#fr1-bg)"/>
+  <ellipse cx="200" cy="150" rx="250" ry="185" fill="url(#fr1-blush)"/>
+  <ellipse cx="620" cy="470" rx="245" ry="180" fill="url(#fr1-sage)"/>
+  <ellipse cx="590" cy="140" rx="170" ry="125" fill="url(#fr1-blush)" opacity="0.55"/>
+
+  <!-- pressed petals, scattered like a herbarium sheet -->
+  <g>
+    <use href="#fr1-petal" fill="#d98ea0" opacity="0.85" transform="translate(118 112) rotate(-24) scale(1.15)"/>
+    <use href="#fr1-petal" fill="#f2cfd5" opacity="0.95" transform="translate(298 74) rotate(40) scale(0.8)"/>
+    <use href="#fr1-petal" fill="#e8b3bf" opacity="0.8" transform="translate(516 132) rotate(-12) scale(1)"/>
+    <use href="#fr1-petal" fill="#c9798c" opacity="0.7" transform="translate(652 236) rotate(66) scale(0.9)"/>
+    <use href="#fr1-petal" fill="#a7b39f" opacity="0.85" transform="translate(146 326) rotate(18) scale(1)"/>
+    <use href="#fr1-petal" fill="#eec9d1" opacity="0.95" transform="translate(352 254) rotate(-50) scale(0.7)"/>
+    <use href="#fr1-petal" fill="#d98ea0" opacity="0.75" transform="translate(452 372) rotate(24) scale(1.2)"/>
+    <use href="#fr1-petal" fill="#e8b3bf" opacity="0.85" transform="translate(614 466) rotate(-34) scale(0.95)"/>
+    <use href="#fr1-petal" fill="#c9798c" opacity="0.7" transform="translate(214 496) rotate(72) scale(1.05)"/>
+    <use href="#fr1-petal" fill="#8fa089" opacity="0.7" transform="translate(706 92) rotate(-60) scale(0.75)"/>
+    <use href="#fr1-petal" fill="#f2cfd5" opacity="0.9" transform="translate(84 462) rotate(-8) scale(0.85)"/>
+    <use href="#fr1-petal" fill="#a7b39f" opacity="0.75" transform="translate(414 534) rotate(34) scale(0.9)"/>
+    <use href="#fr1-petal" fill="#d98ea0" opacity="0.6" transform="translate(738 356) rotate(10) scale(0.7)"/>
+    <use href="#fr1-petal" fill="#e8b3bf" opacity="0.7" transform="translate(368 430) rotate(-84) scale(0.6)"/>
+  </g>
+
+  <!-- fine pollen specks -->
+  <g fill="#e6c173" opacity="0.65">
+    <circle cx="264" cy="176" r="5"/>
+    <circle cx="562" cy="322" r="4"/>
+    <circle cx="176" cy="248" r="3.5"/>
+    <circle cx="700" cy="520" r="5"/>
+    <circle cx="452" cy="96" r="3.5"/>
+    <circle cx="96" cy="378" r="4"/>
+    <circle cx="544" cy="556" r="3"/>
+  </g>
+
+  <!-- pressed-sheet border -->
+  <rect x="22" y="22" width="756" height="556" rx="12" fill="none" stroke="#d98ea0" stroke-opacity="0.55" stroke-width="2"/>
+  <rect x="34" y="34" width="732" height="532" rx="8" fill="none" stroke="#d98ea0" stroke-opacity="0.22" stroke-width="1"/>
+</svg>

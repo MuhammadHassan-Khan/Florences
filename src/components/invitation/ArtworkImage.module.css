@@ -1,0 +1,29 @@
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.fallback {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  border: 1px dashed color-mix(in srgb, currentColor 32%, transparent);
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, currentColor 5%, transparent);
+  color: inherit;
+}
+
+.fallbackMark {
+  font-size: var(--text-lg);
+  opacity: 0.6;
+}
+
+.fallbackText {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  opacity: 0.7;
+}

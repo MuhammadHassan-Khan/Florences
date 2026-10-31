@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Sample artwork — pointed Mughal arch with gold linework on an emerald ground</title>
+  <defs>
+    <linearGradient id="rh1-ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a3b2d" />
+      <stop offset="1" stop-color="#06281e" />
+    </linearGradient>
+    <radialGradient id="rh1-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#e9d9ae" stop-opacity="0.35" />
+      <stop offset="1" stop-color="#e9d9ae" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Emerald ground -->
+  <rect width="800" height="600" fill="url(#rh1-ground)" />
+
+  <!-- Ceremonial double border -->
+  <rect x="24" y="24" width="752" height="552" rx="10" fill="none" stroke="#c9a24b" stroke-opacity="0.4" stroke-width="2" />
+  <rect x="36" y="36" width="728" height="528" rx="6" fill="none" stroke="#c9a24b" stroke-opacity="0.18" />
+  <g fill="#c9a24b" fill-opacity="0.5">
+    <rect x="55" y="55" width="10" height="10" transform="rotate(45 60 60)" />
+    <rect x="735" y="55" width="10" height="10" transform="rotate(45 740 60)" />
+    <rect x="55" y="535" width="10" height="10" transform="rotate(45 60 540)" />
+    <rect x="735" y="535" width="10" height="10" transform="rotate(45 740 540)" />
+  </g>
+
+  <!-- Spandrel rosettes -->
+  <g fill="none" stroke="#c9a24b" stroke-opacity="0.65">
+    <g transform="translate(185 175)">
+      <circle r="28" />
+      <path d="M0 -26 L7 -7 L26 0 L7 7 L0 26 L-7 7 L-26 0 L-7 -7 Z" fill="#c9a24b" fill-opacity="0.4" stroke="none" />
+      <circle r="6" fill="#c9a24b" fill-opacity="0.8" stroke="none" />
+    </g>
+    <g transform="translate(615 175)">
+      <circle r="28" />
+      <path d="M0 -26 L7 -7 L26 0 L7 7 L0 26 L-7 7 L-26 0 L-7 -7 Z" fill="#c9a24b" fill-opacity="0.4" stroke="none" />
+      <circle r="6" fill="#c9a24b" fill-opacity="0.8" stroke="none" />
+    </g>
+  </g>
+
+  <!-- Lamp glow inside the arch -->
+  <circle cx="400" cy="278" r="90" fill="url(#rh1-glow)" />
+
+  <!-- Pointed Mughal arch -->
+  <path d="M290 500 V 320 Q 290 190 400 120 Q 510 190 510 320 V 500" fill="#0f4a37" stroke="#c9a24b" stroke-width="3" />
+  <path d="M320 500 V 330 Q 320 215 400 158 Q 480 215 480 330 V 500" fill="none" stroke="#c9a24b" stroke-opacity="0.5" stroke-width="1.5" />
+
+  <!-- Hanging lamp -->
+  <line x1="400" y1="192" x2="400" y2="244" stroke="#c9a24b" stroke-opacity="0.7" stroke-width="1.5" />
+  <path d="M400 244 L 424 262 L 424 296 L 400 314 L 376 296 L 376 262 Z" fill="#c9a24b" fill-opacity="0.85" />
+  <path d="M400 252 L 416 266 L 416 292 L 400 306 L 384 292 L 384 266 Z" fill="#0f4a37" fill-opacity="0.6" stroke="none" />
+
+  <!-- Apex finial -->
+  <circle cx="400" cy="100" r="7" fill="#c9a24b" />
+  <path d="M400 78 L 406 92 L 400 106 L 394 92 Z" fill="#c9a24b" fill-opacity="0.7" />
+
+  <!-- Plinth -->
+  <rect x="260" y="500" width="280" height="12" fill="#c9a24b" fill-opacity="0.55" />
+  <rect x="248" y="516" width="304" height="6" fill="#c9a24b" fill-opacity="0.28" />
+  <line x1="60" y1="540" x2="740" y2="540" stroke="#c9a24b" stroke-opacity="0.2" />
+</svg>

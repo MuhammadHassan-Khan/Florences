@@ -1,0 +1,330 @@
+@import 'tailwindcss';
+
+/*
+ * Design tokens — single source of truth for the visual language.
+ * Dark charcoal base, off-white typography, restrained lime accent.
+ * Tailwind utilities like `bg-ink-800`, `text-bone-dim`, `text-accent`
+ * are generated from these tokens.
+ */
+@theme {
+  /* --- Color: charcoal base ------------------------------------- */
+  --color-ink-950: #0a0b0d; /* page background */
+  --color-ink-900: #0d0f12; /* alternating section background */
+  --color-ink-850: #111318; /* inputs, inset panels */
+  --color-ink-800: #14171c; /* cards */
+  --color-ink-750: #181b21; /* card hover */
+  --color-ink-700: #1d2129; /* elevated chips */
+  --color-ink-600: #262b34; /* strong borders */
+
+  /* --- Color: off-white typography ------------------------------ */
+  --color-bone: #f2f1ec; /* primary text */
+  --color-bone-dim: #a9adb6; /* secondary text (8.7:1 on ink-950) */
+  --color-bone-faint: #858a94; /* captions (5.6:1 on ink-950) */
+
+  /* --- Color: restrained lime accent ---------------------------- */
+  --color-accent: #aee838; /* 13.5:1 on ink-950 */
+  --color-accent-strong: #c3f55e; /* hover */
+  --color-accent-deep: #7fae24; /* accent text on light surfaces */
+  --color-on-accent: #101307; /* text on accent (13:1) */
+
+  /* --- Color: status -------------------------------------------- */
+  --color-danger: #f87171;
+  --color-success: #86efac;
+
+  /* --- Typography ------------------------------------------------ */
+  --font-sans:
+    'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif;
+  --font-mono:
+    ui-monospace, 'SFMono-Regular', 'Cascadia Mono', 'Roboto Mono', Menlo, Consolas, monospace;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-ink-950);
+    color: var(--color-bone);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Fixed header clearance for anchor jumps. */
+  section[id] {
+    scroll-margin-top: 5.25rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-on-accent);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* --- Layout ---------------------------------------------------- */
+  .container-page {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 76rem;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-page {
+      padding-inline: 2rem;
+    }
+  }
+
+  /* --- Technical grid backdrop ----------------------------------- */
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgba(242, 241, 236, 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(242, 241, 236, 0.045) 1px, transparent 1px);
+    background-size: 72px 72px;
+  }
+
+  .glow-lime {
+    background: radial-gradient(
+      60% 55% at 68% 40%,
+      rgba(174, 232, 56, 0.11) 0%,
+      rgba(174, 232, 56, 0.04) 42%,
+      transparent 72%
+    );
+  }
+
+  /* --- Eyebrow (mono, technical) --------------------------------- */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+
+  .eyebrow::before {
+    content: '';
+    width: 1.5rem;
+    height: 1px;
+    background-color: var(--color-accent);
+    opacity: 0.7;
+  }
+
+  /* --- Buttons ---------------------------------------------------- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    padding: 0.85rem 1.5rem;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease,
+      transform 0.2s ease;
+    cursor: pointer;
+  }
+
+  .btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+    transform: none;
+  }
+
+  .btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-on-accent);
+    border: 1px solid var(--color-accent);
+  }
+
+  .btn-primary:hover:not(:disabled) {
+    background-color: var(--color-accent-strong);
+    border-color: var(--color-accent-strong);
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    background-color: transparent;
+    color: var(--color-bone);
+    border: 1px solid rgba(242, 241, 236, 0.24);
+  }
+
+  .btn-ghost:hover:not(:disabled) {
+    border-color: rgba(174, 232, 56, 0.55);
+    background-color: rgba(242, 241, 236, 0.05);
+    transform: translateY(-1px);
+  }
+
+  .btn-sm {
+    padding: 0.55rem 1.05rem;
+    font-size: 0.85rem;
+  }
+
+  /* --- Cards ------------------------------------------------------- */
+  .card {
+    background-color: var(--color-ink-800);
+    border: 1px solid rgba(242, 241, 236, 0.08);
+    border-radius: 1rem;
+    transition:
+      border-color 0.2s ease,
+      transform 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  .card:hover {
+    border-color: rgba(174, 232, 56, 0.32);
+    background-color: var(--color-ink-750);
+    transform: translateY(-2px);
+  }
+
+  /* --- Chips / badges ---------------------------------------------- */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    border: 1px solid rgba(242, 241, 236, 0.14);
+    background-color: rgba(242, 241, 236, 0.04);
+    border-radius: 999px;
+    padding: 0.28rem 0.7rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-bone-dim);
+  }
+
+  .chip-accent {
+    border-color: rgba(174, 232, 56, 0.4);
+    background-color: rgba(174, 232, 56, 0.08);
+    color: var(--color-accent);
+  }
+
+  .badge-example {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border-radius: 999px;
+    border: 1px dashed rgba(174, 232, 56, 0.5);
+    background-color: rgba(174, 232, 56, 0.07);
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 0.22rem 0.6rem;
+  }
+
+  /* --- Forms -------------------------------------------------------- */
+  .field {
+    width: 100%;
+    background-color: var(--color-ink-850);
+    border: 1px solid rgba(242, 241, 236, 0.12);
+    border-radius: 0.65rem;
+    padding: 0.72rem 0.9rem;
+    color: var(--color-bone);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    transition: border-color 0.15s ease;
+  }
+
+  .field::placeholder {
+    color: var(--color-bone-faint);
+  }
+
+  .field:hover {
+    border-color: rgba(242, 241, 236, 0.22);
+  }
+
+  .field:focus {
+    border-color: rgba(174, 232, 56, 0.55);
+  }
+
+  .field[aria-invalid='true'] {
+    border-color: var(--color-danger);
+  }
+
+  .field-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-bone);
+    margin-bottom: 0.4rem;
+  }
+
+  .field-error {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.8rem;
+    color: var(--color-danger);
+  }
+
+  select.field {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' stroke='%23a9adb6' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.95rem center;
+    padding-right: 2.4rem;
+  }
+
+  /* --- Scroll reveal ------------------------------------------------- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+    .card:hover,
+    .btn-primary:hover:not(:disabled),
+    .btn-ghost:hover:not(:disabled) {
+      transform: none;
+    }
+  }
+}

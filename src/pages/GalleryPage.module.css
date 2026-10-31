@@ -1,0 +1,50 @@
+.page {
+  max-width: var(--content-wide);
+  margin-inline: auto;
+  padding: var(--space-7) var(--space-4) var(--space-8);
+  display: grid;
+  gap: var(--space-7);
+}
+
+.intro {
+  max-width: 46rem;
+  display: grid;
+  gap: var(--space-3);
+}
+
+.eyebrow {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-gold-deep);
+}
+
+.title {
+  font-size: var(--text-hero);
+  font-weight: 500;
+}
+
+.lede {
+  color: var(--color-ink-muted);
+  font-size: var(--text-md);
+  max-width: 40rem;
+}
+
+/* --- Grid ------------------------------------------------------------- */
+
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 17.5rem), 1fr));
+  gap: var(--space-5);
+}
+
+.gridItem {
+  display: flex;
+}
+
+.gridItem > a {
+  width: 100%;
+}
